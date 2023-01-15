@@ -1,0 +1,80 @@
+
+#--react--toast-container{
+	position: fixed;
+	width: 30%;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 9999;
+	transition: 0.2s all;
+}
+
+@media screen and (max-width: 500px) {
+	#--react--toast-container {
+		width: 95%;
+	}
+}
+.--react--toast-alert-info,
+.--react--toast-alert-error,
+.--react--toast-alert-warning,
+.--react--toast-alert-success,
+.--react--toast-alert-info {
+	display: grid;
+	grid-template-columns: 30px auto;
+	align-items: center;
+	transition: 0.2s all;
+	
+	animation: fadeInExpand 150ms;
+	margin: 15px 0 0 0;
+	padding: 16px 15px;
+	border-radius: 5px;
+	font-size: 15px;
+	box-shadow: 0 10px 10px 0 rgba(11, 11, 11, 0.495), 0 0 2px 0 rgba(6, 6, 6, 0.451);
+}
+
+.--react--toast-alert-error {
+	background-color: rgb(91, 24, 24);
+}
+.--react--toast-alert-warning {
+	background-color: rgb(154, 116, 2);
+}
+.--react--toast-alert-success {
+	background-color: rgb(33, 106, 26);
+}
+.--react--toast-alert-info{
+	background-color: rgb(33, 65, 98);
+}
+
+.--react--toast-alert-error p,
+.--react--toast-alert-warning p,
+.--react--toast-alert-success p,
+.--react--toast-alert-info p {
+	font-weight: 600;
+	margin: 0;
+	word-break: break-word;
+	color: #ffffff;
+}
+
+.--react--toast-alert-error svg,
+.--react--toast-alert-warning svg,
+.--react--toast-alert-success svg,
+.--react--toast-alert-info svg {
+	width: 20px;
+	height: 20px;
+}
+
+@keyframes fadeInExpand {
+	0% {
+		opacity: 0;
+	}
+
+	35% {
+		opacity: 1;
+		transform: scale(1.25);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

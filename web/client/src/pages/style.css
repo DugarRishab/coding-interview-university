@@ -1,0 +1,222 @@
+:root{
+	--bg: rgb(13,17,23);
+	--bg-light: rgb(22,27,34);
+	--bg-transparent: rgba(22,27,34, 0.5);
+	--primary: rgb(88,166,255);
+	--primary-dark: rgb(51, 110, 177);
+	--secondary: rgb(22, 56, 96);
+	--grey: rgba(180, 180, 180);
+	--dark-grey: rgba(180, 180, 180, 0.25); 
+}
+.home{
+	width: 100%;
+	overflow-x: hidden;
+	/* padding: 10px; */
+	margin-top: 50px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.home .menu{
+	width: 350px;
+	min-width: 350px;
+	background-color: var(--bg-light);
+	margin: 30px 10px 0 0;
+	border: 1px solid var(--grey);
+	border-radius: 5px;
+	padding: 0px 20px;
+	position: fixed;
+	height: 80vh;
+	overflow-y: scroll;
+}
+.home .content{
+	width: calc(100% - 400px);
+	margin-left: 400px;
+}
+.home .menu ul{
+	/* list-style: none; */
+}
+
+a{
+	color: var(--primary-dark);
+	text-decoration: none;
+	font-weight: 500;
+	transition: 0.25s all;
+}
+a:hover{
+	color: var(--primary);
+	text-decoration: underline;
+}
+h1{
+	margin: 50px 0 25px 0;
+	position: relative;
+}
+h1::after{
+	width: 100%;
+	height: 2px;
+	content: "";
+	position: absolute;
+	background-color: rgb(88,166,255, 0.25);
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+h2{
+	margin: 40px 0 20px 0;
+	position: relative;
+}
+h2::after{
+	width: 100%;
+	height: 2px;
+	content: "";
+	position: absolute;
+	background-color: rgb(88,166,255, 0.25);
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+h3{
+	margin: 30px 0 15px 0;
+}
+p{
+	margin: 15px 0;
+	line-break: auto;
+	
+}
+strong{
+	font-weight: 600;
+	/* text-decoration: underline; */
+	color: var(--primary);
+}
+ul{
+
+}
+li{
+	margin-left: 3rem;
+	margin: 5px 0 5px 2rem;
+}
+.with-check, li .with-check{
+	list-style: none;
+	/* color: var(--primary); */
+	border: 1px solid var(--dark-grey);
+	padding: 5px 10px;
+	border-radius: 5px;
+	background-color: var(--bg-transparent);
+}
+.with-check li{
+	margin-left: 2rem;
+}
+hr{
+	height: 2.5px;
+	border: none;
+	background-color: rgba(150, 150, 150, 0.5);
+	margin: 25px 0;
+}
+code{
+	background-color: rgba(180, 180, 180, 0.2);
+	padding: 5px 10px;
+	border-radius: 5px;
+			line-break: auto;
+	word-break: break-all;
+	/* color: var(--primary); */
+	word-wrap: break-word;
+	margin: 15px 0px;
+}
+pre{
+		/* line-break: auto; */
+	/* word-break: break-all; */
+	margin: 20px 0;
+	width: 100%;
+	padding: 15px 10px;
+	max-width: 100%;
+	/* word-wrap: normal; */
+	/* display: unset; */
+	white-space: -moz-pre-wrap;
+	white-space: pre-wrap;
+	background-color: rgba(180, 180, 180, 0.2);
+	border-radius: 5px;
+	word-wrap: normal;
+}
+blockquote{
+	color: var(--grey);
+
+}
+pre code{
+	background-color: transparent;
+	padding: 5px 0px;
+}
+img{
+	border-radius: 5px;
+	max-width: 100%;
+}
+.MuiSvgIcon-root[data-testid="CheckBoxOutlineBlankIcon"]{
+	/* border-color: white !important; */
+	color: var(--grey);
+}
+.navbar{
+	width: calc(100% - 20px);
+	max-width: 1300px;
+	height: 60px;
+	margin: 10px 0 20px 0;
+	/* background-color: var(--primary-dark); */
+	border: 0px solid red;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1000;
+	border-radius: 5px;
+}
+.navbar.active{
+	background-color: var(--bg-light);
+	border: 1px solid var(--grey);
+}
+.logo{
+	font-size: 1.5rem;
+	font-weight: 500;
+	transition: 0.25s all;
+}
+.navbar .left-col{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+.navbar .logo{
+	opacity: 0;
+	margin-left: 10px;
+}
+.navbar.active .logo{
+	opacity: 100%;
+}
+.MuiDrawer-root .MuiPaper-root{
+	width: 100% !important;
+	max-width: 100% !important;
+	padding: 10px;
+}
+.auth{
+	margin-top: 100px;
+}
+.profile{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 480px),
+	only screen and (max-device-width: 480px){
+		.home .content{
+			/* margin-left: 10px; */
+			margin-left: 0;
+			width: 100%;
+			padding: 0 10px;
+		}
+	}
