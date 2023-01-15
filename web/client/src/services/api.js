@@ -5,7 +5,7 @@ const api = axios.create({
 	// baseURL: "http://localhost:8000/api/v1",
 	withCredentials: true,
 	'Access-Control-Allow-Credentials': true,
-	baseURL: "https://cui.onrender.com/api/v1/"
+	baseURL: "https://ciu.onrender.com/api/v1/"
 });
 
 export const googleAuth = (code) => api.get(`./auth/google?code=${code}`);
