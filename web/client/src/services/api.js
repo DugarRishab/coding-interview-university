@@ -4,6 +4,7 @@ axios.defaults.withCredentials = true;
 const api = axios.create({
 	// baseURL: "http://localhost:8000/api/v1",
 	withCredentials: true,
+	'Access-Control-Allow-Credentials': true,
 	baseURL: "https://cui.onrender.com/api/v1/"
 });
 
