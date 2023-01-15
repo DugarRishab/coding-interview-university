@@ -78,7 +78,7 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<GoogleOAuthProvider clientId="163584497548-6uovpebrvioqdepje90dinuagvi60ulc.apps.googleusercontent.com">
+			<GoogleOAuthProvider clientId="326838942005-162k8q323tub50v1g6flditpt10b7tq2.apps.googleusercontent.com">
 				<div className="App">
 					<Router>
 						<Navbar
