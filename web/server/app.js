@@ -10,8 +10,6 @@ const dotenv = require('dotenv');
 const helmet = require('helmet');
 const cookies = require('cookie-parser');
 
-
-
 // IMPORT ROUTERS
 const authRouter = require('./routes/authRoutes');
 const userRouter = require('./routes/userRoutes');
