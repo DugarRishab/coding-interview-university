@@ -18,7 +18,7 @@ export default (props) => {
 				console.log("result=>", result);
 				props.login(result.data.data.user);
 				alert({ message: "Successfully Logged In", type: "success" });
-				window.location.reload();
+				// window.location.reload();
 				return navigate("/");
 
 			} else {
