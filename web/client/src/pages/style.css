@@ -216,7 +216,7 @@ img{
 
 @media only screen and (max-width: 480px),
 	only screen and (max-device-width: 480px){
-		.home .content{
+		.home .content, .flutter .content{
 			/* margin-left: 10px; */
 			margin-left: 0;
 			width: 100%;
