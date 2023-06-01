@@ -2,9 +2,9 @@ import axios from "axios";
 axios.defaults.withCredentials = true;
 
 const api = axios.create({
-	baseURL: "http://localhost:8000/api/v1",
+	// baseURL: "http://localhost:8000/api/v1",
 	withCredentials: true,
-	// baseURL: "https://ciu.onrender.com/api/v1/"
+	baseURL: "https://ciu.onrender.com/api/v1/"
 });
 
 export const googleAuth = (code) => api.get(`./auth/google?code=${code}`);
