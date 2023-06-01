@@ -8,7 +8,7 @@
 	--grey: rgba(180, 180, 180);
 	--dark-grey: rgba(180, 180, 180, 0.25); 
 }
-.home{
+.home, .flutter{
 	width: 100%;
 	overflow-x: hidden;
 	/* padding: 10px; */
@@ -34,6 +34,9 @@
 .home .content{
 	width: calc(100% - 400px);
 	margin-left: 400px;
+}
+.flutter .content{
+	width: calc(100% - 400px);
 }
 .home .menu ul{
 	/* list-style: none; */

@@ -168,6 +168,9 @@ const Navbar = ({
 					<span class="material-icons">chevron_left</span>
 				</IconButton>
 				<Divider />
+				{
+					
+				}
 				<>
 					<h2 id="table-of-contents">Table of Contents</h2>
 					<h3 id="the-study-plan">The Study Plan</h3>

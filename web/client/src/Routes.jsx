@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Auth from "./pages/Auth";
+import Flutter from "./pages/Flutter";
 
 
 const AllRoutes = ({userLocation, setUserLocation, user, login, logout}) => {
@@ -12,6 +13,13 @@ const AllRoutes = ({userLocation, setUserLocation, user, login, logout}) => {
 				path="/"
 				element={
 					<Home login={login} logout={logout} user={user}></Home>
+				}
+			></Route>
+			<Route
+				exact
+				path="/flutter"
+				element={
+					<Flutter login={login} logout={logout} user={user}></Flutter>
 				}
 			></Route>
 			<Route
