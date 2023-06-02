@@ -52,10 +52,11 @@ const userSchema = new mongoose.Schema(
         image: String,
         tasks: [{
             id: String,
+            cat: String,
             status: {
                 type: Boolean,
                 default: false,
-                cat: String
+                
             }
         }]
         
