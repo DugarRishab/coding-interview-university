@@ -35,6 +35,7 @@ const Home = ({ user }) => {
 			await markComplete({
 				taskId: e.target.id,
 				status: e.target.checked,
+				cat: 'dsa'
 			});
 			// console.log(e.target.id);
 
@@ -48,7 +49,10 @@ const Home = ({ user }) => {
 		if (user) {
 			const copyChecked = [...checked];
 			user.tasks.forEach((task) => {
-				copyChecked[+task.id] = task.status;
+				if (task.cat === "dsa" || task.cat === undefined) {
+					copyChecked[+task.id] = task.status;
+				}
+				
 			});
 			setChecked(copyChecked);
 			// console.log("updated Check => ", checked);

@@ -54,7 +54,8 @@ const userSchema = new mongoose.Schema(
             id: String,
             status: {
                 type: Boolean,
-                default: false
+                default: false,
+                cat: String
             }
         }]
         

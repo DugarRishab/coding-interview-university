@@ -109,7 +109,7 @@ exports.markComplete = catchAsync(async (req, res, next) => {
 	var itemExists = false;
 	
 	user.tasks.forEach(task => {
-		if (task.id === req.body.taskId) {
+		if (task.id === req.body.taskId && task.cat === req.body.cat) {
 			itemExists = true;
 			task.status = req.body.status;
 		}
@@ -117,7 +117,8 @@ exports.markComplete = catchAsync(async (req, res, next) => {
 	if (!itemExists) {
 		user.tasks.push({
 			id: req.body.taskId,
-			status: req.body.status
+			status: req.body.status,
+			cat: req.body.cat
 		});
 	}
 

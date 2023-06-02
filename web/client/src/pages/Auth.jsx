@@ -88,8 +88,8 @@ const Auth = ({user, login, logout}) => {
 						message: "Successfully Logged In",
 						type: "success",
 					});
-					window.location.reload();
-					return navigate("/");
+					// window.location.reload();
+					navigate("/");
 					// redirect("/");
 				}
 				login(res.data.data.user);
